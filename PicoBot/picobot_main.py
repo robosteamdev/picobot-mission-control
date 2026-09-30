@@ -742,49 +742,49 @@ while True:
         elif "GET /?action=start" in request_str:
             # Update params before start (same style as your line follower)
             if "speed=" in request_str:
-                base_speed = int(request_str.split("speed=")[1].split("&")[0])
+                base_speed = int(request_str.split("speed=")[1].split("&")[0].split(" ")[0])
             if "slight=" in request_str:
-                slight_ratio = float(request_str.split("slight=")[1].split("&")[0])
+                slight_ratio = float(request_str.split("slight=")[1].split("&")[0].split(" ")[0])
             if "mild=" in request_str:
-                mild_ratio = float(request_str.split("mild=")[1].split("&")[0])
+                mild_ratio = float(request_str.split("mild=")[1].split("&")[0].split(" ")[0])
             if "hard=" in request_str:
-                hard_ratio = float(request_str.split("hard=")[1].split("&")[0])
+                hard_ratio = float(request_str.split("hard=")[1].split("&")[0].split(" ")[0])
             if "grace=" in request_str:
-                grace_period = int(request_str.split("grace=")[1].split("&")[0])
+                grace_period = int(request_str.split("grace=")[1].split("&")[0].split(" ")[0])
             if "search=" in request_str:
-                search_ratio = float(request_str.split("search=")[1].split("&")[0])
+                search_ratio = float(request_str.split("search=")[1].split("&")[0].split(" ")[0])
 
             # Mission params
             if "base_center=" in request_str:
-                base_center = int(request_str.split("base_center=")[1].split("&")[0])
+                base_center = int(request_str.split("base_center=")[1].split("&")[0].split(" ")[0])
             if "base_offset=" in request_str:
-                base_offset_deg = int(request_str.split("base_offset=")[1].split("&")[0])
+                base_offset_deg = int(request_str.split("base_offset=")[1].split("&")[0].split(" ")[0])
             if "first_side=" in request_str:
                 base_first_side = request_str.split("first_side=")[1].split("&")[0]
                 if base_first_side not in ("left", "right"):
                     base_first_side = "left"
             if "arm_transport=" in request_str:
-                arm_transport_angle = int(request_str.split("arm_transport=")[1].split("&")[0])
+                arm_transport_angle = int(request_str.split("arm_transport=")[1].split("&")[0].split(" ")[0])
             if "arm_down=" in request_str:
-                arm_down_angle = int(request_str.split("arm_down=")[1].split("&")[0])
+                arm_down_angle = int(request_str.split("arm_down=")[1].split("&")[0].split(" ")[0])
             if "grip_open=" in request_str:
-                grip_open_angle = int(request_str.split("grip_open=")[1].split("&")[0])
+                grip_open_angle = int(request_str.split("grip_open=")[1].split("&")[0].split(" ")[0])
             if "grip_close=" in request_str:
-                grip_close_angle = int(request_str.split("grip_close=")[1].split("&")[0])
+                grip_close_angle = int(request_str.split("grip_close=")[1].split("&")[0].split(" ")[0])
             if "servo_settle=" in request_str:
-                servo_settle_ms = int(request_str.split("servo_settle=")[1].split("&")[0])
+                servo_settle_ms = int(request_str.split("servo_settle=")[1].split("&")[0].split(" ")[0])
             if "reverse_speed=" in request_str:
-                reverse_speed = int(request_str.split("reverse_speed=")[1].split("&")[0])
+                reverse_speed = int(request_str.split("reverse_speed=")[1].split("&")[0].split(" ")[0])
             if "reverse_time=" in request_str:
-                reverse_time_ms = int(request_str.split("reverse_time=")[1].split("&")[0])
+                reverse_time_ms = int(request_str.split("reverse_time=")[1].split("&")[0].split(" ")[0])
             if "rotate_dir=" in request_str:
                 rotate_dir = request_str.split("rotate_dir=")[1].split("&")[0]
                 if rotate_dir not in ("left", "right"):
                     rotate_dir = "left"
             if "rotate_speed=" in request_str:
-                rotate_speed = int(request_str.split("rotate_speed=")[1].split("&")[0])
+                rotate_speed = int(request_str.split("rotate_speed=")[1].split("&")[0].split(" ")[0])
             if "rotate_time=" in request_str:
-                rotate_time_ms = int(request_str.split("rotate_time=")[1].split("&")[0])
+                rotate_time_ms = int(request_str.split("rotate_time=")[1].split("&")[0].split(" ")[0])
 
             # Init arm to transport pose before moving
             arm.control_servo(0, base_center)
@@ -820,49 +820,49 @@ while True:
         elif "GET /?action=update" in request_str:
             # Update line params
             if "speed=" in request_str:
-                base_speed = int(request_str.split("speed=")[1].split("&")[0])
+                base_speed = int(request_str.split("speed=")[1].split("&")[0].split(" ")[0])
             if "slight=" in request_str:
-                slight_ratio = float(request_str.split("slight=")[1].split("&")[0])
+                slight_ratio = float(request_str.split("slight=")[1].split("&")[0].split(" ")[0])
             if "mild=" in request_str:
-                mild_ratio = float(request_str.split("mild=")[1].split("&")[0])
+                mild_ratio = float(request_str.split("mild=")[1].split("&")[0].split(" ")[0])
             if "hard=" in request_str:
-                hard_ratio = float(request_str.split("hard=")[1].split("&")[0])
+                hard_ratio = float(request_str.split("hard=")[1].split("&")[0].split(" ")[0])
             if "grace=" in request_str:
-                grace_period = int(request_str.split("grace=")[1].split("&")[0])
+                grace_period = int(request_str.split("grace=")[1].split("&")[0].split(" ")[0])
             if "search=" in request_str:
-                search_ratio = float(request_str.split("search=")[1].split("&")[0])
+                search_ratio = float(request_str.split("search=")[1].split("&")[0].split(" ")[0])
 
             # Update mission params
             if "base_center=" in request_str:
-                base_center = int(request_str.split("base_center=")[1].split("&")[0])
+                base_center = int(request_str.split("base_center=")[1].split("&")[0].split(" ")[0])
             if "base_offset=" in request_str:
-                base_offset_deg = int(request_str.split("base_offset=")[1].split("&")[0])
+                base_offset_deg = int(request_str.split("base_offset=")[1].split("&")[0].split(" ")[0])
             if "first_side=" in request_str:
                 v = request_str.split("first_side=")[1].split("&")[0]
                 if v in ("left", "right"):
                     base_first_side = v
             if "arm_transport=" in request_str:
-                arm_transport_angle = int(request_str.split("arm_transport=")[1].split("&")[0])
+                arm_transport_angle = int(request_str.split("arm_transport=")[1].split("&")[0].split(" ")[0])
             if "arm_down=" in request_str:
-                arm_down_angle = int(request_str.split("arm_down=")[1].split("&")[0])
+                arm_down_angle = int(request_str.split("arm_down=")[1].split("&")[0].split(" ")[0])
             if "grip_open=" in request_str:
-                grip_open_angle = int(request_str.split("grip_open=")[1].split("&")[0])
+                grip_open_angle = int(request_str.split("grip_open=")[1].split("&")[0].split(" ")[0])
             if "grip_close=" in request_str:
-                grip_close_angle = int(request_str.split("grip_close=")[1].split("&")[0])
+                grip_close_angle = int(request_str.split("grip_close=")[1].split("&")[0].split(" ")[0])
             if "servo_settle=" in request_str:
-                servo_settle_ms = int(request_str.split("servo_settle=")[1].split("&")[0])
+                servo_settle_ms = int(request_str.split("servo_settle=")[1].split("&")[0].split(" ")[0])
             if "reverse_speed=" in request_str:
-                reverse_speed = int(request_str.split("reverse_speed=")[1].split("&")[0])
+                reverse_speed = int(request_str.split("reverse_speed=")[1].split("&")[0].split(" ")[0])
             if "reverse_time=" in request_str:
-                reverse_time_ms = int(request_str.split("reverse_time=")[1].split("&")[0])
+                reverse_time_ms = int(request_str.split("reverse_time=")[1].split("&")[0].split(" ")[0])
             if "rotate_dir=" in request_str:
                 v = request_str.split("rotate_dir=")[1].split("&")[0]
                 if v in ("left", "right"):
                     rotate_dir = v
             if "rotate_speed=" in request_str:
-                rotate_speed = int(request_str.split("rotate_speed=")[1].split("&")[0])
+                rotate_speed = int(request_str.split("rotate_speed=")[1].split("&")[0].split(" ")[0])
             if "rotate_time=" in request_str:
-                rotate_time_ms = int(request_str.split("rotate_time=")[1].split("&")[0])
+                rotate_time_ms = int(request_str.split("rotate_time=")[1].split("&")[0].split(" ")[0])
 
             response = "HTTP/1.1 200 OK\r\n"
             response += "Content-Type: text/plain\r\n"
